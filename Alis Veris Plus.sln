@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alis Veris Plus", "Alis Veris Plus.csproj", "{B35C1BE5-E596-48C0-B925-A733A6D51795}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B35C1BE5-E596-48C0-B925-A733A6D51795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35C1BE5-E596-48C0-B925-A733A6D51795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35C1BE5-E596-48C0-B925-A733A6D51795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35C1BE5-E596-48C0-B925-A733A6D51795}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4400D28B-5E77-439C-ACEF-C8AFA93C24CC}
+	EndGlobalSection
+EndGlobal
