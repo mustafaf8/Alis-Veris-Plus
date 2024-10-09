@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Alis_Veris_Plus.Models.Product>
+
+<h2>Ürünler Listesi</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Fiyat</th>
+            <th>Açıklama</th>
+            <th>Resim URL</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Description</td>
+                <td><img src="@product.ImageUrl" alt="Ürün Resmi" style="width: 50px; height: 50px;" /></td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-sm btn-warning">Düzenle</a>
+                    <form asp-action="DeleteConfirmed" asp-route-id="@product.Id" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger">Sil</button>
+                        
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Yeni Ürün Ekle</a>

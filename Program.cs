@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Alis_Veris_Plus.Data; // Bu, ApplicationDbContext sýnýfýnýzýn bulunduðu namespace
+
 namespace Alis_Veris_Plus
 {
     public class Program
@@ -9,13 +12,17 @@ namespace Alis_Veris_Plus
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            // Veritabaný baðlantýsýný ayarlayýn
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -27,8 +34,8 @@ namespace Alis_Veris_Plus
             app.UseAuthorization();
 
             app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                    name: "default",
+                    pattern: "{controller=Products}/{action=Index}/{id?}");
 
             app.Run();
         }
